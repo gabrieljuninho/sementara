@@ -1,3 +1,10 @@
 {
+  "rules": {
+    "indent": ["error", 2],
+    "linebreak-style": 0,
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"]
+  },
+  "ignorePatterns": ["**/node_modules/*", "**/public/*"],
   "extends": "next/core-web-vitals"
 }
