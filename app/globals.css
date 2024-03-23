@@ -6,4 +6,112 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  .-rotate-z-90 {
+    transform: rotateZ(-90deg);
+  }
+
+  .clip-rect-1 {
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+
+  .whenContentEditable[contenteditable="true"] {
+    -webkit-user-modify: read-write-plaintext-only;
+    caret-color: rgb(55, 53, 47);
+  }
+
+  .grid-column-full {
+    grid-column: full;
+  }
+
+  .grid-column-content {
+    grid-column: content;
+  }
+
+  .translate-3d-0 {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .translate-3d-today {
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  .translate-z-0 {
+    transform: translateZ(0);
+  }
+
+  .font-size-inherit {
+    font-size: inherit;
+  }
+}
+
+:root {
+  --full-viewport-height: 374px;
+
+  --drag-handle-color: black;
+  --crop-mask-color: white;
+
+  --drag-handle-opacity: 0.3;
+  --crop-mask-opacity: 0.5;
+
+  --rc-drag-handle-size: 12px;
+  --rc-drag-handle-mobile-size: 24px;
+  --rc-drag-bar-size: 6px;
+  --rc-drag-handle-bg-colour: rgba(0, 0, 0, 0.2);
+  --rc-border-color: hsla(0, 0%, 100%, 0.7);
+  --rc-focus-color: #08f;
+
+  --drag-handle-offset: -6px;
+  --drag-handle-short-side: 5px;
+  --drag-handle-long-side: 48px;
+  --drag-handle-corner: 20px;
+  --drag-handle-border: 20px;
+  --drag-handle-color: #fff;
+  --drag-handle-opacity: 0.8;
+
+  --crop-mask-color: #fff;
+  --crop-mask-opacity: 0.8;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d3d1cb;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aeaca6;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #edece9;
+}
+
+::selection {
+  background-color: rgba(35, 131, 226, 0.28);
+}
+
+html {
+  position: relative;
+  height: 100vh;
+  background: transparent;
+  overflow: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+[contenteditable] {
+  text-align: left;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+[contenteditable]:empty:after {
+  content: attr(placeholder);
 }

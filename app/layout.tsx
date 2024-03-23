@@ -4,6 +4,8 @@ import { cn } from "@/common/libs/cn";
 
 import { fontHeading, fontSans } from "@/common/styles/fonts";
 
+import Layouts from "@/common/components/layouts";
+
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -21,7 +23,7 @@ export default function RootLayout({
       <body
         className={cn("font-sans", fontHeading.variable, fontSans.variable)}
       >
-        {children}
+        <Layouts>{children}</Layouts>
       </body>
     </html>
   );
